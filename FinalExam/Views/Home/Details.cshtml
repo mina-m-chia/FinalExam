@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Details";
+}
+
+@model Quote
+
+<h1>Details</h1>
+
+<!--Buttons for Edit and Delete-->
+<a class="btn btn-warning" asp-controller="Home" asp-action="Edit" asp-route-quoteid="@Model.QuoteID">Edit</a>
+<a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-quoteid="@Model.QuoteID">Delete</a>
+<br />
+<br />
+
+<!--Details-->
+<table class="table table-bordered table-striped">
+
+    <thead class="font-weight-bold">
+        <tr>
+            <th>Quote ID: @Model.QuoteID </th>
+        </tr>
+    </thead>
+
+    <tr>
+        <td>Text</td>
+        <td>@Model.Text</td>
+    </tr>
+    <tr>
+        <td>Author</td>
+        <td>@Model.Author</td>
+    </tr>
+    <tr>
+        <td>Date</td>
+        <td>@Model.Date</td>
+    </tr>
+    <tr>
+        <td>Subject</td>
+        <td>@Model.Subject</td>
+    </tr>
+    <tr>
+        <td>Citation</td>
+        <td>@Model.Citation</td>
+    </tr>
+
+
+</table>
